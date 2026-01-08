@@ -20,3 +20,10 @@ Aplikasi untuk melaporkan kejadian kebakaran, medis, dan pencurian, lengkap deng
 - HTTP Request
 - Camera
 - Geolocation
+
+## Link Figma
+
+- Desain UI Aplikasi:
+- https://www.figma.com/design/NXuV9ksqq2gumpTyiRUIoA/Untitled?node-id=0-1&t=1Dd5c4sc09R3eXtG-1
+  
+
