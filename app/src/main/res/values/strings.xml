@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">FirebaseProjek</string>
+    <string name="title_activity_pilih_lokasi">PilihLokasiActivity</string>
+</resources>

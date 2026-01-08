@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!-- Header merah atas -->
+    <View
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:background="#D50000" />
+
+    <!-- Footer merah bawah -->
+    <View
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="#D50000" />
+
+    <!-- Isi di antara header & footer -->
+    <ScrollView
+        android:id="@+id/scroll_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header"
+        android:layout_above="@id/footer">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp">
+
+            <!-- Judul -->
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="LAPORAN PENGADUAN MASYARAKAT"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/tvSubTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center"
+                android:text="Laporkan jika terjadi keadaan darurat, pertolongan terdekat akan segera sampai disana."
+                android:textSize="12sp"
+                android:textColor="#555555" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="16dp" />
+
+            <!-- Kartu laporan kebakaran -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardKebakaran"
+                android:layout_width="match_parent"
+                android:layout_height="96dp"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardUseCompatPadding="true"
+                app:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imgKebakaran"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/kebakaran"
+                        android:alpha="0.9"
+                        android:contentDescription="@string/app_name" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_margin="12dp"
+                        android:text="Laporan Kebakaran"
+                        android:textStyle="bold"
+                        android:textSize="14sp"
+                        android:textColor="#000000" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Kartu laporan medis -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardMedis"
+                android:layout_width="match_parent"
+                android:layout_height="96dp"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardUseCompatPadding="true"
+                app:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/medis"
+                        android:alpha="0.9"
+                        android:contentDescription="@string/app_name" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_margin="12dp"
+                        android:text="Laporan Medis"
+                        android:textStyle="bold"
+                        android:textSize="14sp"
+                        android:textColor="#000000" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Kartu laporan pencurian -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardPencurian"
+                android:layout_width="match_parent"
+                android:layout_height="96dp"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardUseCompatPadding="true"
+                app:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/pencurian"
+                        android:alpha="0.9"
+                        android:contentDescription="@string/app_name" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_margin="12dp"
+                        android:text="Laporan Pencurian"
+                        android:textStyle="bold"
+                        android:textSize="14sp"
+                        android:textColor="#000000" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Kartu riwayat laporan -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardRiwayat"
+                android:layout_width="match_parent"
+                android:layout_height="96dp"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardUseCompatPadding="true"
+                app:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/riwayat"
+                        android:alpha="0.9"
+                        android:contentDescription="@string/app_name" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_margin="12dp"
+                        android:text="Riwayat Laporan"
+                        android:textStyle="bold"
+                        android:textSize="14sp"
+                        android:textColor="#000000" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

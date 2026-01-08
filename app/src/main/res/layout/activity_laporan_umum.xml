@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!-- Toolbar merah -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_umum"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
+        android:background="#D50000"
+        android:paddingTop="16dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <TextView
+            android:id="@+id/tv_toolbar_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Laporan"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="20sp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Footer merah bawah -->
+    <View
+        android:id="@+id/footer_umum"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="#D50000" />
+
+    <!-- Isi scroll -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar_umum"
+        android:layout_above="@id/footer_umum"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp">
+
+            <!-- Peringatan -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:layout_marginTop="16dp"
+                android:background="#FFCDD2">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_warning_red"
+                    app:tint="#D50000" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:text="Gunakan fitur ini hanya untuk keadaan darurat."
+                    android:textColor="#D50000"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Upload foto -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Unggah Foto Kejadian"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:textColor="#000000" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/bg_upload">
+
+                <ImageView
+                    android:id="@+id/img_preview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/btn_add_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:background="#DDDDDD"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_add_image"
+                        app:tint="#000000" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="Add Image"
+                        android:textColor="#000000"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <!-- Tanggal & waktu -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Tanggal &amp; Waktu Kejadian"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/et_tanggal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Pilih tanggal &amp; waktu"
+                android:background="@null"
+                android:focusable="false"
+                android:clickable="true"
+                android:inputType="none"
+                android:textSize="14sp"
+                android:textColor="#000000"
+                android:textColorHint="#B3B3B3" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#BDBDBD" />
+
+            <!-- Telepon -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Nomor Telepon"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/et_telepon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nomor Telepon"
+                android:inputType="phone"
+                android:background="@null"
+                android:textSize="14sp"
+                android:textColor="#000000"
+                android:textColorHint="#B3B3B3" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#BDBDBD" />
+
+            <!-- Lokasi deskripsi -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Lokasi Kejadian"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/et_lokasi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Alamat / deskripsi lokasi"
+                android:background="@null"
+                android:textSize="14sp"
+                android:textColor="#000000"
+                android:textColorHint="#B3B3B3" />
+
+            <!-- Koordinat -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <EditText
+                    android:id="@+id/et_latitude"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Latitude"
+                    android:inputType="numberDecimal"
+                    android:background="@null"
+                    android:textSize="14sp"
+                    android:textColor="#000000"
+                    android:textColorHint="#B3B3B3" />
+
+                <EditText
+                    android:id="@+id/et_longitude"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:hint="Longitude"
+                    android:inputType="numberDecimal"
+                    android:background="@null"
+                    android:textSize="14sp"
+                    android:textColor="#000000"
+                    android:textColorHint="#B3B3B3" />
+            </LinearLayout>
+
+            <!-- Link Maps -->
+            <EditText
+                android:id="@+id/et_link_maps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:hint="Link Google Maps"
+                android:background="@null"
+                android:textSize="14sp"
+                android:textColor="#000000"
+                android:textColorHint="#B3B3B3" />
+
+            <!-- Tombol GPS & Maps -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <Button
+                    android:id="@+id/btn_ambil_lokasi"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Ambil Lokasi dari GPS"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btn_lihat_maps"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:text="Lihat di Google Maps"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#BDBDBD" />
+
+            <!-- Deskripsi (label dinamis di Activity) -->
+            <TextView
+                android:id="@+id/tv_deskripsi_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Deskripsi"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/et_isi"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:gravity="top|start"
+                android:hint="Jelaskan kejadian secara detail."
+                android:inputType="textMultiLine"
+                android:background="@null"
+                android:textSize="14sp"
+                android:textColor="#000000"
+                android:textColorHint="#B3B3B3" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#BDBDBD" />
+
+            <!-- ProgressBar -->
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:visibility="gone" />
+
+            <!-- Tombol bawah -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp">
+
+                <Button
+                    android:id="@+id/btn_kembali"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:text="Kembali"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    android:backgroundTint="#1976D2" />
+
+                <Button
+                    android:id="@+id/btn_kirim"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:text="Kirim Laporan"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    android:backgroundTint="#D50000" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
